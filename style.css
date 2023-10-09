@@ -53,15 +53,8 @@ body {
 .input {
     border: 1px solid #aaa;
     border-radius: 5px;
-    padding:5px;
+    padding-top:20px;
     
-}
-.input:is(:focus,:valid){
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 13);
-
-}
-.container form .form.second{
-
 }
 
 .container form .form.second{
@@ -79,6 +72,8 @@ form.setActive .form.second{
     opacity:0;
     pointer-events: auto;
 }
+
+  
 @media(max-width: 730px) {
 .wrap {
     display:grid;
@@ -94,5 +89,8 @@ form.setActive .form.second{
     padding:3px;
     margin-bottom: 10px;
 }
+/* .input-Name{
+    height: 25px;
+} */
   
 }
