@@ -41,6 +41,7 @@ function action()
             checkfill=false;
             break;
         }
+        checkfill=true;
         
     }
     if(checkfill==false)
