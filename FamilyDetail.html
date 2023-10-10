@@ -4,13 +4,13 @@
    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page-2</title>
 
     
 
     <!-- styling -->
     <link rel="stylesheet" href="./style.css">
-
+  
 
 
 </head>
@@ -26,29 +26,29 @@
             <div class="personal-div">
                 <div class="wrap">
                     <label class="label">Father Name</label>
-                    <input type="text" class="input" placeholder="Pankaj">
+                    <input type="text" class="input-father" placeholder="Pankaj">
                 </div>
                 <div class="wrap">
                     <label class="label">Contact no.</label>
-                    <input type="date" class="input" placeholder="23/23/23">
+                    <input type="contact" class="input-father-contact" placeholder="9957711685">
                 </div>
                 <div class="wrap">
                     <label class="label">Age</label>
-                    <input type="email" class="input" placeholder="pankaj123@gmail.com">
+                    <input type="email" class="input-father-age" placeholder="pankaj123@gmail.com">
                 </div>
             </div>
             <div class="personal-div">
                 <div class="wrap">
                     <label class="label">Mother Name</label>
-                    <input type="text" class="input" placeholder="Pankaj">
+                    <input type="text" class="input-mother" placeholder="Pankaj">
                 </div>
                 <div class="wrap">
                     <label class="label">Contact no.</label>
-                    <input type="date" class="input" placeholder="23/23/23">
+                    <input type="contact" class="input-mother-contact" placeholder="9957711685">
                 </div>
                 <div class="wrap">
                     <label class="label">Age</label>
-                    <input type="email" class="input" placeholder="pankaj123@gmail.com">
+                    <input type="email" class="input-mother-age" placeholder="pankaj123@gmail.com">
                 </div>
             </div>
         </section>
@@ -77,10 +77,12 @@
         <button type="submit" style="transition:all 0.3s linear;background-color: #4070f4;;cursor:pointer; height: 20px; width:60px;margin-bottom:15px;">
             <a href="http://localhost:5500/register.html">Previous</a>
         </button>
-        <button   type="submit" style="background-color: #4070f4;;cursor:pointer; height: 20px; width:60px;margin-bottom:5px;">
+        <button onclick='submit()'  class="button-submit"   type="submit" style="background-color: #4070f4;;cursor:pointer; height: 20px; width:60px;margin-bottom:5px;">
             Submit
         </button>   
     </div>
+    <sript src="./register.js"></sript>
+
     
 </body>
 </html>

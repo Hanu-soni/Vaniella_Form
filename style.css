@@ -1,3 +1,9 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #4070f4;
@@ -5,14 +11,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-     margin: 0;
-   
+    margin: 0;
 }
 
 .container {
     width: 80%;
     background-color: white;
-    padding: 70px;
+    padding: 30px; /* Reduced padding for better spacing */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -21,13 +26,11 @@ body {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 20px;
-    text-align: left;
-    color:#FF1493;
+    color: #FF1493;
 }
 
 .sub-header {
-   text-align: left;
-   font-size: 15px;
+    font-size: 15px;
 }
 
 .sub-header h3 {
@@ -36,14 +39,15 @@ body {
 
 .personal-div {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
 .wrap {
-    display:flex;
-    flex-direction:column;
-    justify-content:space- between;   
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Use gap for spacing between elements */
 }
 
 .label {
@@ -53,44 +57,70 @@ body {
 .input {
     border: 1px solid #aaa;
     border-radius: 5px;
-    padding-top:20px;
-    
+    padding: 10px; /* Adjusted padding for better spacing */
 }
 
-.container form .form.second{
-    
+.container form .form.second {
     opacity: 0;
     pointer-events: none;
 }
-form.setActive .form.second{
+
+form.setActive .form.second {
     opacity: 1;
     pointer-events: auto;
-
-
 }
-form.setActive .form.second{
-    opacity:0;
+
+/* Removed duplicate CSS rule */
+/* form.setActive .form.second {
+    opacity: 0;
     pointer-events: auto;
-}
-
-  
-@media(max-width: 730px) {
-.wrap {
-    display:grid;
-    row-gap:20px;
-    padding:5px;
-    margin-bottom:2px;
-
-    
-}
-.personal-div {
-    justify-content:center;
-    flex-direction:column;
-    padding:3px;
-    margin-bottom: 10px;
-}
-/* .input-Name{
-    height: 25px;
 } */
-  
+
+@media (max-width: 730px) {
+    .wrap {
+        flex-direction: row;
+        column-gap: 20px;
+        padding: 5px;
+    }
+
+    .personal-div {
+        justify-content: center;
+        flex-direction: column;
+        padding: 3px;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+
+    .header,
+    .sub-header {
+        text-align: center; /* Apply text-align center for headers */
+    }
+}
+
+@media (max-width: 462px) {
+    .wrap {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+    input{
+        width:80%;
+    }
+
+    .error {
+        color: rgb(226, 103, 103);
+        text-align: center;
+        margin-bottom: 5px;
+    }
 }

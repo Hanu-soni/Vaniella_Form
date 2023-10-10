@@ -7,6 +7,15 @@ let  details={
     background:""
 
 }
+
+let family={
+    fathername:"",
+    confather:"",
+    agefather:"",
+    mothername:"",
+    conmother:"",
+    agemother:"",
+}
 function action()
 {
     let checkfill=false;
@@ -17,7 +26,11 @@ function action()
     details.pan=document.querySelector('.input-Pan').value;
     details.address=document.querySelector('.input-Address').value;
     details. background=document.querySelector('.input-Bg').value;
-    console.log(details);
+
+
+
+
+   
 
     for (const [key, value] of Object.entries(details)) {
         console.log(value);
@@ -48,6 +61,8 @@ function action()
     if(checkfill==false)
     {
         alert('re-fill the form correctly');
+       
+        divmob.innerText='ERROR FOUND'
         document.querySelector('.input-Name').value=null;
         document.querySelector('.input-Dob').value=null;
         document.querySelector('.input-Email').value=null;
@@ -57,9 +72,50 @@ function action()
     }
         
     else{
+        //After every-thing , I will change to updating false  and then git-push
+        let updating=true;
         const newurl="https://hanu-soni.github.io/Vaniella_Form/FamilyDetail";
-        window.location.href=newurl;
+        window.location.href=updating?'http://localhost:5500/FamilyDetail.html':newurl;
+        //working on pure-progress bar
+        const progressbar=document.createElement('div');
+        progressbar.style.cssText='margin-top:10px;justify-content:center;display:flex;color:green;border-radius:100px;height:40px;width:40px'
+        const container = document.getElementById("container");
+        container.appendChild(progressbar);
+
+
     }
-      //please add it
+    
+       
+        
+    
 }
+
+
+
+    //not working may be due different page issue
+    function submit()
+    {
+        console.log("started")
+
+    family.fathername=document.querySelector('.input-father').value;
+    family.confather=document.querySelector('.input-father-contact').value;;
+    family.agefather=document.querySelector('.input-father-age').value;
+    family.mothername=document.querySelector('.input-mother').value;
+    family.conmother=document.querySelector('.input-mother-contact').value;
+    family.agemother=document.querySelector('.input-mother-age').value;
+    console.log(family);
+    for (const [key, value] of Object.entries(family)) {
+        if(value.length==0)
+        {
+            alert(`${key} is missing`)
+            checkfill=false;
+            break;
+        }
+    }
+    localStorage.setItem('family-detail',family);
+
+    }
+    
+
+
             
