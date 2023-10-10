@@ -56,8 +56,8 @@ function action()
         
     else{
         const newurl="https://hanu-soni.github.io/Vaniella_Form/FamilyDetail";
-        window.location.href="http://localhost:5500/FamilyDetail.html"||newurl;
+        window.location.href=newurl;
     }
-      
+      //please add it
 }
             
