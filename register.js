@@ -42,6 +42,7 @@ function action()
             break;
         }
         checkfill=true;
+        console.log(checkfill);
         
     }
     if(checkfill==false)
@@ -56,8 +57,8 @@ function action()
     }
         
     else{
-        const newurl="https://hanu-soni.github.io/Vaniella_Form/FamilyDetail";
-        window.location.href=newurl;
+        //const newurl="https://hanu-soni.github.io/Vaniella_Form/FamilyDetail";
+        window.location.href='http://localhost:5500/FamilyDetail.html'
     }
       //please add it
 }
